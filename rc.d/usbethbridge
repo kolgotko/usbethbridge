@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+
+# PROVIDE: usbethbridge
+# REQUIRE: devd
+
+. /etc/rc.subr
+
+name="usbethbridge"
+rcvar=usbethbridge_enable
+command="/usr/local/bin/usbethbridge"
+command_args="> /dev/null"
+
+load_rc_config $name
+run_rc_command "$1"

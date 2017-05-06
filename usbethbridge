@@ -1,0 +1,6 @@
+#!/bin/sh
+
+ifconfig=/sbin/ifconfig
+
+$ifconfig bridge0 destroy
+$ifconfig bridge0 create
